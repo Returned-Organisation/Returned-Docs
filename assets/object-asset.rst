@@ -97,7 +97,7 @@ Interior Culling
 Interactables
 `````````````
 
-**Interactability** *enum* (``None``, ``Binary_State``, ``Dropper``, ``Note``, ``Water``, ``Fuel``, ``Rubble``, ``NPC``, ``Quest``, ``Dialogue``): All ``Interactability_`` properties will require that this property has been set. The enumerator selected for this property will affect which properties can be used, how these properties will function when used, and how this object will behave in-game. Defaults to the ``NPC`` enumerator when using ``Type NPC``, otherwise this property will default to ``None``.
+**Interactability** *enum* (``None``, ``Binary_State``, ``Dropper``, ``Note``, ``Water``, ``Fuel``, ``Rubble``, ``NPC``, ``Quest``, ``Dialogue``, ``Physics_Prop``): All ``Interactability_`` properties will require that this property has been set. The enumerator selected for this property will affect which properties can be used, how these properties will function when used, and how this object will behave in-game. Defaults to the ``NPC`` enumerator when using ``Type NPC``, otherwise this property will default to ``None``.
 
 - ``Binary_State`` objects will change between their two states when interacted with – such as an open or closed door.
 - ``Dropper`` objects can spawn items when interacted with.
@@ -107,6 +107,7 @@ Interactables
 - ``NPC`` objects can provide access to dialogue, quests, and vendors.
 - ``Quest`` objects can be interacted with, but unlike other options they have no additional functionality.
 - ``Dialogue`` objects open the dialogue screen - similar to NPCs - with a non-NPC appearance and custom interact text.
+- ``Physics_Prop`` objects are bouncy, resettable props that can be pushed by players, zombies, animals, vehicles, melee, bullets, and explosions. See :ref:`doc_physics_prop_example` for a worked example.
 
 .. note::
 
@@ -166,6 +167,29 @@ Interactables
 **Interactability_Reward_XP** *uint32*: Amount of experience to reward when the object using ``Interactability Rubble`` is destroyed.
 
 **Interactability_Text_Lines** *uint16*: Total number of lines to display when an object using ``Interactability Note`` is interacted with. This property is used in conjunction with ``Interactability_Text_Line_#``. Defaults to 0.
+
+Physics Props
+`````````````
+
+These properties require ``Interactability Physics_Prop``. By default, all sources can move the prop unless restricted with the allow/deny properties below.
+
+**Physics_Prop_Allowed** *string*: Comma-separated allow list of sources that can move the prop. Valid values: ``Players``, ``Zombies``, ``Animals``, ``Vehicles``, ``Melee``, ``Bullets``, ``Explosions``.
+
+**Physics_Prop_Denied** *string*: Comma-separated deny list of sources. Use ``All`` to start from every source, then remove individual sources from the list.
+
+**Physics_Prop_Allow_Players** *bool*: Whether players walking or sprinting into the prop can move it.
+
+**Physics_Prop_Allow_Zombies** *bool*: Whether zombie movement can push the prop.
+
+**Physics_Prop_Allow_Animals** *bool*: Whether animal movement can push the prop.
+
+**Physics_Prop_Allow_Vehicles** *bool*: Whether vehicle collision can push the prop.
+
+**Physics_Prop_Allow_Melee** *bool*: Whether fists and melee weapons can apply impulse.
+
+**Physics_Prop_Allow_Bullets** *bool*: Whether gunfire can apply impulse.
+
+**Physics_Prop_Allow_Explosions** *bool*: Whether explosion blast force can move the prop.
 
 Rubble
 ``````

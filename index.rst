@@ -59,6 +59,7 @@ Unturned Documentation
 	:glob:
 
 	assets/object-asset
+	assets/physics-prop-example
 	assets/material-palette-asset
 
 .. toctree::
@@ -168,6 +169,8 @@ Unturned Documentation
 	u3-sdk/faq
 	u3-sdk/unity-project
 	u3-sdk/legacy-id-availability
+	u3-sdk/returned-development
+	u3-sdk/build-tool
 
 Welcome to the official documentation for `Unturned <https://store.steampowered.com/app/304930>`_'s modding and server hosting features! To navigate, use the table of contents in the sidebar or the search function in the top-left corner.
 

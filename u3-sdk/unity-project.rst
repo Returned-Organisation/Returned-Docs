@@ -12,6 +12,10 @@ If you have the Git CLI installed, you can clone the files to your computer with
 
 ``git clone https://github.com/SmartlyDressedGames/U3-SDK.git``
 
+.. note::
+
+	**Returned** fork users should clone `Returned-Organisation/Returned <https://github.com/Returned-Organisation/Returned>`_ instead. See :ref:`doc_returned_development` for git remotes, build workflows, and fork-specific setup.
+
 Getting Started
 ---------------
 
