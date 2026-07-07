@@ -32,6 +32,11 @@ class UnturnedLexer(RegexLexer):
         ]
     }
 
-def setup(sphinx):
-    sphinx.add_lexer("unturneddat", UnturnedLexer)
-    sphinx.add_lexer("unturnedasset", UnturnedLexer)
+def setup(app):
+    app.add_lexer("unturneddat", UnturnedLexer)
+    app.add_lexer("unturnedasset", UnturnedLexer)
+
+    return {
+        "parallel_read_safe": True,
+        "parallel_write_safe": True,
+    }
