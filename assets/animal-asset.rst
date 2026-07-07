@@ -18,28 +18,7 @@ Animal Properties
 
 **Damage** *byte*: Damage dealt to the player per attack.
 
-**Behaviour** *enum* (``Defense``, ``Offense``, ``Counter``, ``Ignore``): AI behavior type. See :ref:`doc_data_eanimalbehaviour` for details.
-
-- ``Defense`` animals flee when alerted or damaged.
-- ``Offense`` animals hunt players who enter alert range, and attack when damaged.
-- ``Counter`` animals (**Returned fork**) ignore nearby players until damaged, then attack the attacker. They do not proactively hunt from proximity alerts.
-- ``Ignore`` animals flee when damaged.
-
-Example — passive-until-provoked predator (Capelobo-style):
-
-.. code-block:: unturneddat
-
-   GUID 55a1df47c3634895ae2cd6608dd95b74
-   Type Animal
-   ID 36085
-
-   Behaviour Counter
-   Health 800
-   Speed_Run 7
-   Speed_Walk 4
-   Damage 30
-
-The **Capelobo** is a rare hostile animal on the Rio de Janeiro map. Using ``Counter`` instead of ``Offense`` lets players pass nearby safely until they attack it.
+**Behaviour** *enum* (``Defense``, ``Offense``, ``Counter``, ``Ignore``): AI behavior type. Defense AI will run away when alerted, Offense AI will attack when alerted, Counter AI will ignore nearby players until damaged and then attack the attacker, and Ignore AI will run away when attacked. See :ref:`doc_data_eanimalbehaviour`.
 
 **Speed_Run** *float*: Running speed in m/s.
 

@@ -1,25 +1,27 @@
-Unturned Documentation
+Returned Documentation
 ======================
 
-These are the source files for *Unturned*'s modding documentation.
+These are the source files for *Returned*'s modding documentation.
 
-The built documentation is hosted by [Read the Docs](https://readthedocs.org/) here: https://docs.smartlydressedgames.com/
+*Returned* is a non-commercial mod fork of the [U3 SDK](https://github.com/SmartlyDressedGames/U3-SDK) for [Unturned](https://smartlydressedgames.com/unturned/). Not affiliated with or endorsed by Smartly Dressed Games.
+
+The built documentation is hosted by [Read the Docs](https://readthedocs.org/) here: https://returned-docs.readthedocs.io/
+
+This repository is based on [SmartlyDressedGames/Unturned-Docs](https://github.com/SmartlyDressedGames/Unturned-Docs). It includes the official Unturned modding documentation, plus additional pages for Returned-specific features.
 
 Offline Downloads
 -----------------
 
-PDF and ePub versions of the documentation can be [downloaded](https://readthedocs.org/projects/unturned/downloads/) for offline use.
+PDF and ePub versions of the documentation can be [downloaded](https://readthedocs.org/projects/returned-docs/downloads/) for offline use.
 
 Contributing
 ------------
 
-Anyone can contribute towards *Unturned*'s modding documentation. This repository has three branches – **latest**, **stable**, and **old-markdown-archive** – although contributions should only be made towards the "latest" branch.
+Anyone can contribute towards *Returned*'s modding documentation. This repository has two branches – **latest** and **stable** – although contributions should only be made towards the "latest" branch.
 
-- **latest**: Always has the latest documentation, including upcoming features that might not be available on the current version of the game.
+- **latest**: Always has the latest documentation, including upcoming Returned features that might not be available in the current version of the fork.
 
-- **stable**: Occassionally updated with the additions to the "latest" branch.
-
-- **old-markdown-archive**: Contains old documentation, in markdown files (rather than reStructuredText). This documentation does not appear on the online documentation site, and is only kept for historical purposes. Its contents may be removed in the future.
+- **stable**: Occasionally updated with the additions to the "latest" branch.
 
 The online documentation pages are generated from .rst (reStructuredText) files. These files are stored in root, but are organized into folders based on where those files appear in the table of contents. For example, the [level-asset.rst](/assets/level-asset.rst) file is located in the "assets" folder.
 
@@ -37,7 +39,7 @@ Most documentation files are formatted similarly. Some important notes:
 
 - The `code-block` directive can be used to display example code with syntax highlighting. Common languages include `cs`, `json`, `text`, `shell`, `bat`, and `unturneddat` (alias: `unturnedasset`).
 
-- Including links to our Unturned Wiki (`https://unturned.wiki.gg/`) can be helpful. Wiki articles linked in the Unturned Documentation should have the "[Category:Pages linked from Unturned Documentation](https://unturned.wiki/wiki/Category:Pages_linked_from_Unturned_Documentation)" hidden tracking category added to them.
+- Including links to the [Unturned Wiki](https://unturned.wiki.gg/) can be helpful. Wiki articles linked in the Returned Documentation should have the "[Category:Pages linked from Unturned Documentation](https://unturned.wiki/wiki/Category:Pages_linked_from_Unturned_Documentation)" hidden tracking category added to them.
 
 Building the Docs
 -----------------
@@ -48,16 +50,16 @@ We recommend using [Visual Studio Code](https://code.visualstudio.com/) with the
 
 Use the same version of Python as configured in `.readthedocs.yaml`. If you have multiple Python versions installed, you may need to manually specify the Python Interpreter that should be used.
 
-1. Clone the Unturned Docs repository:
+1. Clone the Returned Docs repository:
 
 	```shell
-	git clone https://github.com/SmartlyDressedGames/Unturned-Docs.git
+	git clone https://github.com/Returned-Organisation/Returned-Docs.git
 	```
 
-2. Change directory to the Unturned Docs repository:
+2. Change directory to the Returned Docs repository:
 
 	```shell
-	cd Unturned-Docs
+	cd Returned-Docs
 	```
 
 3. *(Optional)* Set up a virtual environment. Virtual environments prevent potential conflicts between the Python packages installed in `requirements.txt` and any Python packages installed on your system.
@@ -65,7 +67,7 @@ Use the same version of Python as configured in `.readthedocs.yaml`. If you have
 	1. Create the virtual environment:
 
 		```shell
-		py -3.11 -m venv .venv
+		py -3.12 -m venv .venv
 		```
 
 	2. Activate the virtual environment:
@@ -100,7 +102,7 @@ Use the same version of Python as configured in `.readthedocs.yaml`. If you have
 	sphinx-build -b html ./ _build/html
 	```
 
-You can now browse the documentation by opening `.../Unturned-Docs/_build/html/index.html` in your web browser. If Esbonio was installed, you can also preview the documentation in Visual Studio Code.
+You can now browse the documentation by opening `.../Returned-Docs/_build/html/index.html` in your web browser. If Esbonio was installed, you can also preview the documentation in Visual Studio Code.
 
 Configure Esbonio for a virtual environment
 ---------------------------------------------
@@ -134,3 +136,15 @@ Locally updating the TOC
 Sometimes, the Table of Contents will fail to update after changes have been made. This is an issue with the Esbonio extension, but it can be safely ignored as it should only affect your local preview of the project pages.
 
 If needed, you can force Esbonio to rebuild these pages. Delete the files at `%APPDATA%\Code\User\workspaceStorage\...\swyddfa.esbonio\sphinx`, run `make html`, and restart the Sphinx language server (e.g., by closing and reopening Visual Studio Code, or by clicking the "Sphinx" button in the bottom-right).
+
+Syncing Upstream Documentation
+------------------------------
+
+Returned Docs is forked from [SmartlyDressedGames/Unturned-Docs](https://github.com/SmartlyDressedGames/Unturned-Docs). To pull upstream documentation updates:
+
+```shell
+git fetch upstream
+git merge upstream/latest
+```
+
+The `upstream` remote should point at `https://github.com/SmartlyDressedGames/Unturned-Docs.git`.

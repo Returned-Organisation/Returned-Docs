@@ -26,20 +26,24 @@ Enumerators
      - Flees when alerted or damaged.
    * - ``Counter``
      - 3
-     - **Returned fork.** Ignores nearby players until damaged, then attacks the attacker. Does not proactively hunt from footstep or gunshot alerts.
+     - Ignores nearby players until damaged, then attacks the attacker.
    * - ``Ignore``
      - 4
      - Flees when damaged. Does not proactively hunt.
 
-Returned fork notes
-```````````````````
+Counter Behaviour
+`````````````````
 
-``Counter`` is intended for animals that should appear passive until provoked — for example, the **Capelobo** from the Rio de Janeiro map (ID **36085**). In the retail map it uses ``Offense``; setting ``Behaviour Counter`` makes it ignore players until attacked.
+.. note::
 
-When a ``Counter`` animal takes damage from a player (melee, gunfire, punch, etc.), ``Animal.alertDamagedByPlayer`` targets that player. ``DamageTool.damageAnimal`` routes player-instigated damage through this path when ``AlertPosition`` is set.
+	``Counter`` is a Returned fork feature. It is intended for animals that should appear passive until provoked.
+
+Unlike ``Offense`` animals, ``Counter`` animals are not alerted by nearby players or gunshots. They only become hostile after taking damage. When damaged by a player, the animal targets that player through ``Animal.alertDamagedByPlayer``. ``DamageTool.damageAnimal`` routes player-instigated damage through this path when ``AlertPosition`` is set.
+
+The **Capelobo** on the Rio de Janeiro map (ID **36085**) is a useful example. In the retail map it uses ``Offense``; setting ``Behaviour Counter`` makes it ignore players until attacked:
 
 .. code-block:: unturneddat
 
-   Behaviour Counter
+	Behaviour Counter
 
 See :ref:`doc_assets_animal` for other animal properties.

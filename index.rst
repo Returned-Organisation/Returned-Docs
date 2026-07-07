@@ -213,9 +213,11 @@ If you refer to a video tutorial (official or otherwise), we recommend double-ch
 Offline Downloads
 -----------------
 
-PDF and Epub versions of the documentation can be `downloaded <https://readthedocs.org/projects/unturned/downloads/>`_ for offline use.
+PDF and Epub versions of the documentation can be `downloaded <https://readthedocs.org/projects/returned-docs/downloads/>`_ for offline use.
 
 Contributing
 ------------
 
-Anyone can contribute towards the *Unturned* modding documentation! To submit an issue, visit the `GitHub repository <https://github.com/SmartlyDressedGames/Unturned-Docs>`_. See the `README <https://github.com/SmartlyDressedGames/Unturned-Docs#readme>`_ for more details on how to contribute.
+Anyone can contribute towards *Returned*'s modding documentation! To submit an issue or pull request, visit the `GitHub repository <https://github.com/Returned-Organisation/Returned-Docs>`_. See the `README <https://github.com/Returned-Organisation/Returned-Docs#readme>`_ for more details on how to contribute.
+
+This documentation is based on the official `Unturned modding documentation <https://docs.smartlydressedgames.com/>`_. Upstream contributions should be made to `SmartlyDressedGames/Unturned-Docs <https://github.com/SmartlyDressedGames/Unturned-Docs>`_.

@@ -107,7 +107,11 @@ Interactables
 - ``NPC`` objects can provide access to dialogue, quests, and vendors.
 - ``Quest`` objects can be interacted with, but unlike other options they have no additional functionality.
 - ``Dialogue`` objects open the dialogue screen - similar to NPCs - with a non-NPC appearance and custom interact text.
-- ``Physics_Prop`` objects are bouncy, resettable props that can be pushed by players, zombies, animals, vehicles, melee, bullets, and explosions. See :ref:`doc_physics_prop_example` for a worked example.
+- ``Physics_Prop`` objects are bouncy, resettable props that can be pushed by players, zombies, animals, vehicles, melee, bullets, and explosions.
+
+.. note::
+
+	``Physics_Prop`` is a Returned fork feature. See :ref:`doc_physics_prop_example` for a worked example.
 
 .. note::
 
@@ -170,6 +174,10 @@ Interactables
 
 Physics Props
 `````````````
+
+.. note::
+
+	These properties are part of a Returned fork feature. See :ref:`doc_physics_prop_example` for a worked example.
 
 These properties require ``Interactability Physics_Prop``. By default, all sources can move the prop unless restricted with the allow/deny properties below.
 
