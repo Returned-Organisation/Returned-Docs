@@ -1,24 +1,28 @@
 # Read the Docs configuration file
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
-# These fields are in the order they are mentioned in the RTD docs.
-
+# Required
 version: 2
 
-# Build PDF and ePub versions for offline use (HTMLzip might be too big to build?)
-formats:
-  - epub
-  - pdf
-
+# Set the OS, Python version, and other tools you might need
 build:
-  os: ubuntu-22.04
+  os: ubuntu-24.04
   tools:
-    python: "3.11"
+    python: "3.12"
 
+# Build documentation at the repository root with Sphinx
+sphinx:
+  configuration: conf.py
+  fail_on_warning: true
+
+# Optionally, but recommended,
+# declare the Python requirements required to build your documentation
+# See https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
 python:
   install:
     - requirements: requirements.txt
 
-sphinx:
-  configuration: conf.py
-  fail_on_warning: true # Make warnings more visible by forcing build to fail
+# PDF and ePub versions for offline use
+formats:
+  - pdf
+  - epub

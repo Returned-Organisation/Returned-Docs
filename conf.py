@@ -9,11 +9,11 @@ import os
 
 # -- Project information
 
-project = "Unturned"
-copyright = "2023, Smartly Dressed Games"
-author = "Smartly Dressed Games"
+project = "Returned"
+copyright = "Returned. A non-commercial mod fork. Not affiliated with Smartly Dressed Games."
+author = "SomeAussieGamer"
 
-version = "3.x"
+version = "0.0.1"
 release = version
 
 # -- General configuration
