@@ -83,17 +83,15 @@ Workflow (Legacy .unity3d)
 
 Use Unity **2022.3.62f3**, then open ``Assets/GameStartup.unity``.
 
-2. Deploy .dat files
-````````````````````
+2. Copy .dat files into ``Builds/Test/``
+````````````````````````````````````````
 
-Open **Window > Unturned > Deploy Soccer Ball .dat Files**. This also runs automatically when you build a legacy bundle.
-
-``Builds/Test/`` is gitignored and gets wiped by **Build Test** / Steam sync. Backups live under ``Assets/Game/Sources/Objects/Examples/``.
+``Builds/Test/`` is gitignored and gets wiped by **Build Test** / Steam sync. Copy tracked backups from ``Assets/Game/Sources/Objects/Examples/`` into the matching runtime folders under ``Builds/Test/``.
 
 3. Build the legacy bundle
 ````````````````````````````
 
-Open **Window > Unturned > Build Soccer Ball Legacy Bundle (Medium)**. This writes ``Builds/Test/Bundles/Objects/Medium/Soccer_Ball_0/Soccer_Ball_0.unity3d`` next to the ``.dat``.
+Open **Window > Unturned > Bundle Tool**. Select the ``Soccer_Ball_0`` source folder, grab assets, and save as ``Soccer_Ball_0.unity3d`` beside the ``.dat`` in ``Builds/Test/Bundles/Objects/Medium/Soccer_Ball_0/``.
 
 4. Rebuild scripts if needed
 ``````````````````````````````
@@ -105,11 +103,10 @@ If you changed code, run **Build Test (Scripts Only)** to refresh ``Builds/Test/
 
 Run ``Builds/Test/Unturned.exe``, then place **Soccer Ball** under **Medium** (ID **65500**).
 
-For the **Sandbox** small variant, use **Window > Unturned > Build Soccer Ball Legacy Bundle (Sandbox Small)**, then place **Soccerball** from the Sandbox asset origin (ID **65501**).
+Sandbox Small Variant
+`````````````````````
 
-.. tip::
-
-	Alternatively, use **Window > Unturned > Bundle Tool**: select the ``Soccer_Ball_0`` source folder, grab assets, and save as ``Soccer_Ball_0.unity3d`` beside the ``.dat``.
+Copy ``Assets/Game/Sources/Objects/Examples/Soccerball/`` into ``Builds/Test/Sandbox/Soccertest/Soccerball/``, build ``Soccerball.unity3d`` with **Bundle Tool**, then place **Soccerball** (ID **65501**).
 
 Troubleshooting
 ---------------
@@ -117,12 +114,12 @@ Troubleshooting
 Missing "Object" GameObject
 ```````````````````````````
 
-The ``.dat`` loaded, but ``Soccer_Ball_0.unity3d`` is missing or does not contain a prefab named ``Object``. Re-run **Build Soccer Ball Legacy Bundle (Medium)**.
+The ``.dat`` loaded, but ``Soccer_Ball_0.unity3d`` is missing or does not contain a prefab named ``Object``. Rebuild the legacy bundle with **Bundle Tool**.
 
 .dat Files Disappeared from ``Builds/Test/``
 `````````````````````````````````````````````
 
-This is expected after **Build Test** or Steam sync. Run **Window > Unturned > Deploy Soccer Ball .dat Files**, or build a legacy bundle (which redeploys them automatically). Source copies are tracked in ``Assets/Game/Sources/Objects/Examples/``.
+This is expected after **Build Test** or Steam sync. Copy them again from ``Assets/Game/Sources/Objects/Examples/``.
 
 Ball Falls Through Ground
 `````````````````````````

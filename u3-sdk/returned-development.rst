@@ -69,6 +69,7 @@ Returned adds documentation for features that are not yet available in the offic
 
 - **Counter animal behaviour** — a new ``Behaviour Counter`` AI type. Animals ignore players until damaged, then attack the attacker. See :ref:`doc_data_eanimalbehaviour` and :ref:`doc_assets_animal`.
 - **Physics props** — bouncy, resettable objects with per-source push rules. See :ref:`doc_physics_prop_example` and :ref:`doc_assets_object`.
+- **Vehicle platform riding** — players can stand on moving vehicle surfaces in multiplayer. See :ref:`doc_vehicle_platform_riding`.
 
 License Reminder
 ----------------

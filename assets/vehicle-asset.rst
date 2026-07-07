@@ -42,6 +42,9 @@ Properties
    * - Property Name
      - Type
      - Default Value
+   * - :ref:`Allow_Whole_Vehicle_Platform <doc_assets_vehicle:allow_whole_vehicle_platform>`
+     - :ref:`bool <doc_data_builtin_types>`
+     - ``false``
    * - :ref:`AdditionalTransparentSections <doc_assets_vehicle:additionaltransparentsections>`
      - :ref:`list of PaintableVehicleSection <doc_assets_vehicle:paintablevehiclesection_dictionary>`
      -
@@ -876,6 +879,19 @@ VehicleWheelConfiguration Dictionary
 
 Property Descriptions
 `````````````````````
+
+.. _doc_assets_vehicle:allow_whole_vehicle_platform:
+
+Allow_Whole_Vehicle_Platform :ref:`bool <doc_data_builtin_types>` ``false``
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+When ``true``, players can ride on any vehicle collider. When ``false``, only ``Platform_#`` surfaces defined in the prefab can be ridden. Defaults to ``false``.
+
+.. note::
+
+	This property is part of a Returned fork feature. See :ref:`doc_vehicle_platform_riding`.
+
+----
 
 .. _doc_assets_vehicle:additionaltransparentsections:
 

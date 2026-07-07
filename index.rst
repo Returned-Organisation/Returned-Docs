@@ -171,6 +171,7 @@ Returned Documentation
 	u3-sdk/legacy-id-availability
 	u3-sdk/returned-development
 	u3-sdk/build-tool
+	u3-sdk/vehicle-platform-riding
 
 Welcome to the documentation for **Returned**, a non-commercial mod fork of `Unturned <https://store.steampowered.com/app/304930>`_ built on the `U3 SDK <https://github.com/SmartlyDressedGames/U3-SDK>`_. This site is based on the official `Unturned modding documentation <https://docs.smartlydressedgames.com/>`_, with additional pages for Returned-specific features.
 
