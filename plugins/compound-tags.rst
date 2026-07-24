@@ -48,7 +48,7 @@ Mutate tags on the server, then sync when the item is already in a player invent
 	}
 
 	CompoundTag tags = jar.item.tags;
-	tags.SetString("MyPlugin.OwnerName", "Eli");
+	tags.SetString("MyPlugin.OwnerName", "Alex");
 	tags.SetInt("MyPlugin.TrackId", 42);
 	tags.Remove("MyPlugin.ObsoleteKey");
 
