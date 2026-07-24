@@ -71,7 +71,7 @@ Like a gun's ``Sight`` / ``Tactical`` / ``Grip`` fields, you can optionally auth
 	V2_Attachment_Slot_0_Default_ID 65002
 	V2_Attachment_Slot_0_Default_Quality 100
 
-When those keys are set, ``getState`` encodes them into ``item.state`` so loot and ``/give`` spawn the wearable already fitted — the same pattern as guns shipping with a default sight. Omit the keys and the socket starts empty. Quality defaults to ``100`` when omitted. Missing default item ids are skipped with a warning. World and admin origins share the same authored defaults.
+When those keys are set, new item instances apply the defaults into compound tags under ``Returned.V2Attachments`` so loot and ``/give`` spawn the wearable already fitted. ``getState`` returns an empty ``item.state`` for V2 wearables; attachments live in tags instead. Omit the keys and the socket starts empty. Quality defaults to ``100`` when omitted. Missing default item ids are skipped with a warning. World and admin origins share the same authored defaults.
 
 Player-facing socket names live in the wearable language file (for example ``English.dat``). Use the socket id as the key:
 
@@ -85,11 +85,11 @@ Player-facing socket names live in the wearable language file (for example ``Eng
 	slot_3 Mag Pouch Right
 	slot_4 Utility Slot
 
-If a key is missing, the inventory UI falls back to the raw socket id. The attached item is a real inventory item with its own GUID, quality, and state. Attachments stay bound to the wearable: unequipping gives a single clothing item that carries its attachments in ``item.state``, and re-equipping restores the filled sockets. Detaching an attachment while the wearable is worn still returns a standalone item.
+If a key is missing, the inventory UI falls back to the raw socket id. The attached item is a real inventory item with its own GUID, quality, and state. Attachments stay bound to the wearable: unequipping gives a single clothing item that carries its attachments in compound tags, and re-equipping restores the filled sockets. Detaching an attachment while the wearable is worn still returns a standalone item.
 
 .. note::
 
-	Attachments persist on the clothing item itself, not as separate inventory items. When you unequip, drop, or die (with clothing loss enabled), the wearable keeps its attachments through a compact ``item.state`` payload (attachment slot, legacy id, and quality per filled socket), similar to how guns persist their attachments. This keeps a kitted-out wearable as one item everywhere the inventory or ground loot moves it.
+	Attachments persist on the clothing item itself, not as separate inventory items. When you unequip, drop, or die (with clothing loss enabled), the wearable keeps its attachments under the reserved compound-tag key ``Returned.V2Attachments`` (GUID, socket id, and quality per filled socket). Legacy compact ``item.state`` attachment layouts are upgraded into that tag on load. See :ref:`doc_returned_compound_tags`. This keeps a kitted-out wearable as one item everywhere the inventory or ground loot moves it.
 
 ``Attachment.prefab`` is parented to the socket transform at local identity. Author the attachment mesh in socket-local space (origin at the mount point), not in spine/vest-root clothing space. Classic clothing-to-spine ``Model_0`` offsets are for wearable prefabs only.
 
@@ -141,3 +141,46 @@ Storage
 -------
 
 V2 storage comes from the worn item plus its attachments. Returned aggregates this storage into a modular worn-equipment page for compatibility with the existing inventory system.
+
+Vendors and NPC rewards
+-----------------------
+
+Sell or reward a kitted V2 wearable the same way gun attachments are overridden:
+
+.. code-block:: unturneddat
+
+	Selling_0_ID 65001
+	Selling_0_V2_Attachment_0_Slot slot_1
+	Selling_0_V2_Attachment_0_ID 65002
+	Selling_0_V2_Attachment_0_Quality 100
+
+Quest item rewards use ``Reward_#_V2_Attachment_#_Slot/ID/Quality``. When no overrides are set, the wearable uses its asset socket defaults written into ``Returned.V2Attachments``.
+
+NPC visual outfits
+------------------
+
+NPC assets can list modular wearables with ``V2_Wearable_#`` (and holiday-prefixed variants). See :ref:`doc_object_asset_npc`. Classic shirt/pants/vest keys still work for V1 body and cosmetics.
+
+Placeable mannequins
+--------------------
+
+The vanilla cloth and metal mannequin barricades keep their gray mannequin skin. Returned force-swaps **only those two assets** to the V2 character body so modular outfits render even when the server body generation is V1. Modded mannequins (custom GUID / custom prefab) are not force-swapped.
+
+Mannequins store a full V2 clothing snapshot in barricade state (after the classic pose byte). Use the existing mannequin UI:
+
+* **Add** a held V2 wearable (with attachments in compound tags) onto the mannequin.
+* **Remove** returns each V2 piece as a single item with attachments encoded in ``Returned.V2Attachments``.
+* **Swap** exchanges the player's worn V2 outfit with the mannequin's.
+* Destroying the barricade drops the same encoded kits.
+
+Classic seven-slot clothing still works on mannequins for non-V2 items and cosmetics.
+
+Zombie visual outfits
+---------------------
+
+When the active body is V2:
+
+* Put a V2 wearable in a zombie table **hat** or **gear** slot (legacy clothing ids), or
+* Author ``V2_Wearable_#`` on a :ref:`zombie difficulty asset <doc_assets_zombie_difficulty>`.
+
+Zombie outfits are visual only (no inventory pages). Attachments use the wearable's asset defaults or difficulty-authored ``V2_Wearable_#_Attachment_*`` keys.

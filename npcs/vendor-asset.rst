@@ -49,6 +49,12 @@ Properties pertaining to items or vehicles that the vendor is willing to sell to
 
 **Selling_#_Tactical** *uint16*: Override for the tactical attachment that should be attached to the item sold.
 
+**Selling_#_V2_Attachment_#_Slot** *string*: Socket id on a V2 wearable (for example ``slot_1``). When set with ``Selling_#_V2_Attachment_#_ID``, the sold clothing item spawns with that attachment mounted. Indexing starts at ``0`` and stops at the first missing slot key.
+
+**Selling_#_V2_Attachment_#_ID** *uint16*: Legacy id of the clothing attachment to mount in the matching socket. ``0`` clears an asset default for that socket.
+
+**Selling_#_V2_Attachment_#_Quality** *byte*: Quality of the mounted attachment. Defaults to ``100``.
+
 Other Properties
 ----------------
 

@@ -176,6 +176,7 @@ Returned Documentation
 
 	plugins/index
 	plugins/custom-item-text
+	plugins/compound-tags
 	plugins/custom-map-images
 	plugins/custom-plugin-map-markers
 	plugins/ui-effect-transforms

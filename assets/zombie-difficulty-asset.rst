@@ -64,3 +64,21 @@ Spawn Chance Properties
 **Boss_Elver_Stomper_Chance** *float*: Decimal-to-percent chance for the zombie to be a Stomper Zombie Boss. Defaults to 0. Requires ``Overrides_Spawn_Chance`` to be true.
 
 **Boss_Kuwait_Chance** *float*: Decimal-to-percent chance for the zombie to be an Evil Eye Zombie Boss. Defaults to 0. Requires ``Overrides_Spawn_Chance`` to be true.
+
+V2 modular clothing
+-------------------
+
+When the active character body is V2, difficulty assets can dress every zombie in the bound with modular wearables (visual only):
+
+.. code-block:: unturneddat
+
+	V2_Wearable_0 <guid_or_id>
+	V2_Wearable_0_Attachment_0_Slot slot_1
+	V2_Wearable_0_Attachment_0_ID 65002
+	V2_Wearable_0_Attachment_0_Quality 100
+
+**V2_Wearable_#** *uint16* or *GUID*: V2 wearable item. Indexing starts at ``0``.
+
+**V2_Wearable_#_Attachment_#_Slot** / **_ID** / **_Quality**: Same pattern as NPC outfits. See :ref:`doc_returned_v2_modular_clothing`.
+
+You can also place a V2 wearable in a zombie table hat or gear clothing slot; those pieces merge with this list at spawn.

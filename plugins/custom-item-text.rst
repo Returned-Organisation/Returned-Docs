@@ -8,6 +8,8 @@ Returned lets a server override the display name and description of a specific i
 Overview
 --------
 
+Custom text is a convenience facade over :ref:`doc_returned_compound_tags`. ``sendItemCustomText`` writes ``Returned.DisplayName`` and ``Returned.DisplayDescription`` on the item's compound tags; ``clearItemCustomText`` removes those keys. Prefer the helpers below unless you need other tag keys.
+
 Custom text is stored on the item instance itself. It is separate from the item's ``state`` byte array and does not replace asset ``.dat`` localization.
 
 When a custom name or description is set, the client resolves display text through ``ItemTool.getDisplayName`` and ``ItemTool.getDisplayDescription``. If no override exists, the client falls back to the item asset's normal name and description builder output.
@@ -63,9 +65,11 @@ gameplay and is written to save files.
 - **Server restart:** custom text is saved to disk and restored on the next server start
   for these containers:
 
-  - Player inventory (``Inventory.dat``, save version 6).
-  - Storage barricades such as crates and lockers (``Barricades.dat``, save version 20).
-  - Vehicle trunks (``Vehicles.dat``, save version 18).
+  - Player inventory (``Inventory.dat``, save version 8).
+  - Storage barricades such as crates and lockers (``Barricades.dat``, save version 21).
+  - Vehicle trunks (``Vehicles.dat``, save version 19).
+
+These versions match the compound-tag save format documented in :ref:`doc_returned_compound_tags`.
 
 .. note::
 

@@ -3,7 +3,7 @@
 Clothing Slots
 ==============
 
-Returned expands the clothing system from seven to fourteen slots. Each slot is a distinct
+Returned expands the clothing system from seven to fifteen slots. Each slot is a distinct
 :ref:`item type <doc_data_eitemtype>`, so it has clear ``.dat`` authoring, its own inventory row, and its
 own plugin ``EItemType`` branch.
 
@@ -91,7 +91,12 @@ Slots are listed in player-facing UI order.
    * - 14
      - Bodysuit
      - ``Bodysuit``
-     - Mesh override + textures
+     - Full-body textures + optional mesh override
+     - Returned
+   * - 15
+     - Mesh Replacement
+     - ``Mesh_Replacement``
+     - Full-body mesh/material override
      - Returned
 
 Shared authoring
@@ -102,7 +107,7 @@ Every clothing type shares the same optional capabilities.
 Armor
 `````
 
-Armor is available on all fourteen slots, so masks, scarfs, gloves and other pieces can contribute
+Armor is available on all fifteen slots, so masks, scarfs, gloves and other pieces can contribute
 protection.
 
 * **Armor**: multiplier applied to incoming damage on the limbs the slot covers, scaled by item quality.
@@ -127,6 +132,7 @@ Any clothing type can provide storage with ``Width`` and ``Height``.
 * A worn item with ``Width`` and ``Height`` greater than zero shows a storage page as usual.
 * A worn item with ``0`` width and height still shows an **empty** storage page by default.
 * Set ``Hide_Storage_Page`` to ``true`` to hide that empty page and restore the legacy behaviour.
+* Gear-only slots (hat, mask, glasses, neckwear, mesh replacement) have no worn storage page.
 
 .. code-block:: unturneddat
 
@@ -147,11 +153,14 @@ Bodysuit exclusivity
 
 While a ``Bodysuit`` is worn it blocks the shirt, pants, gloves and shoes slots, unequipping any items in
 them back to the inventory. The undershirt, jacket, vest and all accessory slots (hat, mask, glasses,
-neckwear, belt, backpack) can still be worn on top.
+neckwear, belt, backpack, mesh replacement) can still be worn on top.
 
 Mesh replacement
 ----------------
 
-The shirt, pants, shoes and bodysuit slots can replace the character mesh and material using the shared
-mesh-override flags. Bodysuit is the primary consumer. See :ref:`doc_character_mesh_replacement` for the
-flags and asset-bundle object names.
+Use ``Type Mesh_Replacement`` for a dedicated full-body character mesh and material swap. It is gear-only
+(no worn storage page) and does not block other clothing slots. When worn it takes priority over mesh-override
+flags on shirt, pants, shoes, or bodysuit. Author 3P mesh overrides for new content; 1P override flags remain
+only for compatibility. See :ref:`doc_character_mesh_replacement`.
+
+Shirt, pants, shoes, and bodysuit can still author the same mesh-override flags as a legacy path.

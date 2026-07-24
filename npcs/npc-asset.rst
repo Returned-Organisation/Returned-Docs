@@ -28,6 +28,28 @@ Clothing
 
 **Glasses** *uint16* or *GUID*: ID or GUID of glasses to wear.
 
+V2 modular outfit
+`````````````````
+
+When the active character body is V2, NPCs can wear modular clothing in addition to (or instead of) the classic shirt/pants/vest slots:
+
+.. code-block:: unturneddat
+
+	V2_Wearable_0 <guid_or_id>
+	V2_Wearable_0_Attachment_0_Slot slot_1
+	V2_Wearable_0_Attachment_0_ID 65002
+	V2_Wearable_0_Attachment_0_Quality 100
+
+**V2_Wearable_#** *uint16* or *GUID*: V2 wearable item. Indexing starts at ``0``.
+
+**V2_Wearable_#_Attachment_#_Slot** *string*: Socket id on that wearable.
+
+**V2_Wearable_#_Attachment_#_ID** *uint16*: Attachment legacy id. ``0`` clears an asset default.
+
+**V2_Wearable_#_Attachment_#_Quality** *byte*: Defaults to ``100``.
+
+Holiday outfits use the same keys with a ``Halloween_`` or ``Christmas_`` prefix (for example ``Halloween_V2_Wearable_0``).
+
 Holiday outfits
 ```````````````
 

@@ -186,3 +186,6 @@ Enumerators
    * - ``Bodysuit``
      - 56
      - Full-body suit that blocks the shirt, pants, gloves and shoes slots. See :ref:`doc_item_clothing_slots`.
+   * - ``Mesh_Replacement``
+     - 57
+     - Dedicated full-body character mesh and material override. Gear-only; does not block other clothing slots. See :ref:`doc_character_mesh_replacement`.

@@ -28,8 +28,8 @@ Body Mesh Replacements
 
 For the full documentation, refer to the :ref:`Character Mesh Replacement <doc_character_mesh_replacement>` documentation.
 
-**Has_1P_Character_Mesh_Override** *bool*: A prefab named "Character_Mesh_1P_Override_0" should be loaded. Defaults to false.
+**Has_1P_Character_Mesh_Override** *bool*: Compatibility only. A prefab named "Character_Mesh_1P_Override_0" should be loaded. Defaults to false. Prefer 3P overrides; see :ref:`doc_character_mesh_replacement`.
 
-**Character_Mesh_3P_Override_LODs** *uint16*: Number of prefabs to load for each LOD index. Defaults to 0.
+**Character_Mesh_3P_Override_LODs** *uint16*: Number of prefabs to load for each LOD index. Defaults to 0. Primary path for new content.
 
-**Has_Character_Material_Override** *bool*: A material named "Character_Material_Override" should be loaded to replace the first-person and third-person mesh materials. Defaults to false.
+**Has_Character_Material_Override** *bool*: A material named "Character_Material_Override" should be loaded to replace the character mesh materials. Defaults to false.

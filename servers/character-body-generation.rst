@@ -10,6 +10,8 @@ Returned can render every humanoid with one of two character body generations:
 
 The active generation applies to every humanoid body: players (first- and third-person), NPCs, mannequins, menu and entity previews, zombies, and ragdolls. Clothing, faces, hair, skins, and mythic effects are unaffected — a full-body clothing mesh override still takes precedence over the generation swap.
 
+Placeable mannequins always use the V2 character body (while keeping the gray mannequin skin) so modular outfits display even when the server body generation is V1. Only the vanilla cloth and metal mannequin assets are force-swapped; modded mannequins keep their own models.
+
 Singleplayer
 ------------
 
