@@ -14,6 +14,7 @@ Returned Documentation
 
 	about/getting-started
 	about/launch-options
+	about/freelook
 	about/steam-workshop
 
 .. toctree::
@@ -49,6 +50,7 @@ Returned Documentation
 	:caption: Creating Vehicles
 
 	assets/vehicle-asset
+	assets/vehicle-carrying
 	assets/vehicle-physics-profile-asset
 	assets/vehicle-redirector-asset
 
@@ -70,6 +72,7 @@ Returned Documentation
 
 	npcs/introduction
 	npcs/npc-asset
+	npcs/roaming-npcs
 	npcs/dialogue-asset
 	npcs/quest-asset
 	npcs/vendor-asset
@@ -111,6 +114,9 @@ Returned Documentation
 
 	mapping/charts
 	mapping/curated-maps
+	mapping/decorative-items
+	mapping/custom-map-markers
+	mapping/player-custom-map-markers
 	mapping/editor-asset-redirectors
 	mapping/favorite-searches
 	mapping/level-batching
@@ -140,6 +146,9 @@ Returned Documentation
 	servers/server-browser-curation
 	servers/server-codes
 	servers/server-configuration
+	servers/character-body-generation
+	servers/admin-commands
+	servers/freecam-photomode
 	servers/server-update-notifications
 
 .. toctree::
@@ -163,17 +172,26 @@ Returned Documentation
 .. toctree::
 	:hidden:
 	:maxdepth: 1
-	:caption: U3 SDK
-	:glob:
+	:caption: Plugins & Modules
 
-	u3-sdk/faq
-	u3-sdk/unity-project
-	u3-sdk/legacy-id-availability
-	u3-sdk/returned-development
-	u3-sdk/build-tool
-	u3-sdk/vehicle-platform-riding
+	plugins/index
+	plugins/custom-item-text
+	plugins/custom-map-images
+	plugins/custom-plugin-map-markers
+	plugins/ui-effect-transforms
+	plugins/server-sent-ui
+	plugins/interaction-menu
+	plugins/server-camera-detach
+	plugins/dashboard-open-hooks
+	plugins/plugin-hotkey-query
 
-Welcome to the documentation for **Returned**, a non-commercial mod fork of `Unturned <https://store.steampowered.com/app/304930>`_ built on the `U3 SDK <https://github.com/SmartlyDressedGames/U3-SDK>`_. This site is based on the official `Unturned modding documentation <https://docs.smartlydressedgames.com/>`_, with additional pages for Returned-specific features.
+Welcome to the documentation for **Returned**, a non-commercial mod of `Unturned <https://store.steampowered.com/app/304930>`_. This site is based on the official `Unturned modding documentation <https://docs.smartlydressedgames.com/>`_, with additional pages for Returned workshop content and server plugin APIs.
+
+.. note::
+
+	Returned is not affiliated with or endorsed by Smartly Dressed Games.
+
+Use the **Creating Items**, **Creating Vehicles**, **Mapping**, and related sections for workshop mods. Use :ref:`doc_plugins` for server plugin and module APIs.
 
 To navigate, use the table of contents in the sidebar or the search function in the top-left corner.
 

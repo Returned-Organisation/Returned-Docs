@@ -3,9 +3,9 @@
 Launch Options
 ==============
 
-**Launch options** can be added to *Unturned* to change certain game settings before running the game. This allows for recovering from certain problems (such as an unwanted resolution or UI scale), troubleshooting a wide range of issues, or toggling settings not available from in-game.
+**Launch options** can be added to *Returned* to change certain game settings before running the game. This allows for recovering from certain problems (such as an unwanted resolution or UI scale), troubleshooting a wide range of issues, or toggling settings not available from in-game.
 
-This article lists the launch options available for *Unturned*. You can `add launch options <https://help.steampowered.com/en/faqs/view/7D01-D2DD-D75E-2955>`_ through your Steam Library.
+This article lists the launch options available for *Returned*. You can `add launch options <https://help.steampowered.com/en/faqs/view/7D01-D2DD-D75E-2955>`_ through your Steam Library.
 
 #. Right-click **Unturned** in your Steam Library.
 
@@ -66,6 +66,8 @@ Effects include:
 **-HostPlayerLimit=** *int*: Clamps max number of players to this number. Useful for hosting providers.
 
 **-LegacyConsole**: Use the legacy console rather than the default threaded console.
+
+**-LegacyUIs**: Use classic Unturned layouts instead of the modern Returned UIs: left-rail main menu, classic inventory, specialty-tab skills list, and faces-ring gesture menu. Without this flag, the cinematic main menu hub, survival loadout inventory, Mastery Board skills tab, and category radial gesture menu are used by default.
 
 **-LogAssemblyResolve**: Log when the resolution of an assembly fails. Useful when working with non-Rocket plugins.
 
@@ -144,7 +146,7 @@ At the time of writing (2025-05-06) the game will convert blueprints from the le
 Unity Options
 -------------
 
-Unity's built-in command-line arguments take priority over *Unturned*'s equivalents. Some of the more relevant Unity arguments are mentioned below, but the rest can be found in the `Unity User Manual <https://docs.unity3d.com/2019.4/Documentation/Manual/PlayerCommandLineArguments.html>`_.
+Unity's built-in command-line arguments take priority over *Returned*'s equivalents. Some of the more relevant Unity arguments are mentioned below, but the rest can be found in the `Unity User Manual <https://docs.unity3d.com/2019.4/Documentation/Manual/PlayerCommandLineArguments.html>`_.
 
 **-batchmode**: Run in batch mode.
 

@@ -3,9 +3,9 @@
 Asset Bundle Custom Data
 ========================
 
-Unity ``ScriptableObject`` which can optionally be created in a :ref:`Master Bundle's <doc_asset_bundles>` root for Unturned-specific asset bundle metadata.
+Unity ``ScriptableObject`` which can optionally be created in a :ref:`Master Bundle's <doc_asset_bundles>` root for Returned-specific asset bundle metadata.
 
-``Owner Workshop File Id`` *uint64*: ID of a file published to the Steam Workshop. If Unturned is loading this asset bundle from a Steam workshop file but the file ID does not match then loading will be canceled. Prevents the asset bundle from being easily copied/stolen.
+``Owner Workshop File Id`` *uint64*: ID of a file published to the Steam Workshop. If Returned is loading this asset bundle from a Steam workshop file but the file ID does not match then loading will be canceled. Prevents the asset bundle from being easily copied/stolen.
 
 How to Set Owner Workshop File
 ------------------------------
@@ -18,4 +18,4 @@ How to Set Owner Workshop File
 
 4. Set ``Owner Workshop File Id`` to match your workshop file's ID.
 
-5. (optional) Check that Unturned is finding the custom data by looking for "Loaded (your asset bundle name) custom data from (path)" in the log file, or "Tried loading (your asset bundle name) optional custom data from (path)" in the case it is not found.
+5. (optional) Check that Returned is finding the custom data by looking for "Loaded (your asset bundle name) custom data from (path)" in the log file, or "Tried loading (your asset bundle name) optional custom data from (path)" in the case it is not found.

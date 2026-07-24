@@ -1,28 +1,77 @@
-// Allows for collapsing TOC sections.
-// Styling handled by toctree_collapse.css stylesheet.
+// Collapsible sidebar TOC for Groundwork (captions + nested page trees).
 
-$(function() {
-	let browsing = false; // Is the reader currently on a page included in the TOC?
+document.addEventListener("DOMContentLoaded", () => {
+	const sidebar = document.querySelector(".sphinxsidebarwrapper");
+	if (!sidebar) {
+		return;
+	}
 
-	// Selects elements from the navigation menu (TOC).
-	const headings = document.querySelectorAll(".wy-menu-vertical .caption[role=heading]");
-	headings.forEach(caption => {
-		const ulist = caption.nextElementSibling;
+	const isCurrentBranch = (element) =>
+		Boolean(
+			element.classList.contains("current") ||
+				element.querySelector(
+					":scope > a.current, :scope li.current, :scope a.current"
+				)
+		);
 
-		// Toggle state when clicked.
-		caption.addEventListener("click", () => {
-			caption.classList.toggle("toggled");
-		});
+	const setExpanded = (toggle, list, expanded) => {
+		toggle.classList.toggle("expanded", expanded);
+		list.classList.toggle("expanded", expanded);
+	};
 
-		// Expand current section be browsed.
-		if (ulist.classList.contains("current")) {
-			caption.classList.add("toggled");
-			browsing = true;
+	// Top-level section captions (About, Returned, …)
+	sidebar.querySelectorAll("p.caption").forEach((caption) => {
+		const list = caption.nextElementSibling;
+		if (!list || list.tagName !== "UL") {
+			return;
 		}
+
+		caption.classList.add("toc-toggle");
+		caption.setAttribute("role", "button");
+		caption.setAttribute("tabindex", "0");
+		list.classList.add("toc-collapse");
+		setExpanded(caption, list, isCurrentBranch(list));
+
+		const toggleCaption = () => {
+			setExpanded(caption, list, !list.classList.contains("expanded"));
+		};
+
+		caption.addEventListener("click", toggleCaption);
+		caption.addEventListener("keydown", (event) => {
+			if (event.key === "Enter" || event.key === " ") {
+				event.preventDefault();
+				toggleCaption();
+			}
+		});
 	});
 
-	// If the reader isn't browsing, just expand the first section instead.
-	if (browsing == false) {
-		headings[0].classList.add("toggled");
-	}
+	// Page entries with in-page heading children
+	sidebar.querySelectorAll("li.toctree-l1").forEach((item) => {
+		const childList = item.querySelector(":scope > ul");
+		const link = item.querySelector(":scope > a");
+		if (!childList || !link) {
+			return;
+		}
+
+		item.classList.add("toc-branch");
+		childList.classList.add("toc-collapse");
+
+		const button = document.createElement("button");
+		button.type = "button";
+		button.className = "toc-expand";
+		button.setAttribute("aria-label", "Toggle section");
+		item.insertBefore(button, link);
+
+		const expand = isCurrentBranch(item);
+		setExpanded(item, childList, expand);
+		button.setAttribute("aria-expanded", expand ? "true" : "false");
+
+		button.addEventListener("click", (event) => {
+			event.preventDefault();
+			event.stopPropagation();
+			const next = !childList.classList.contains("expanded");
+			setExpanded(item, childList, next);
+			button.setAttribute("aria-expanded", next ? "true" : "false");
+		});
+	});
 });

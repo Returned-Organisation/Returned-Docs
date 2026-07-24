@@ -3,7 +3,6 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 import sphinx
-import sphinx_rtd_theme # "Read the Docs Sphinx Theme" https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html
 import sys
 import os
 
@@ -46,12 +45,26 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_theme = "sphinx_rtd_theme"
+# https://sphinx-themes.org/sample-sites/groundwork-sphinx-theme/
+html_theme = "groundwork"
 
-# RTD theme options are documented here: https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
+# Groundwork's FlaskyStyle is a light theme (black tokens + underlined
+# whitespace). Override so code stays readable on Groundwork's dark panels.
+pygments_style = "monokai"
+
 html_theme_options = {
-    # Toc options
-    'collapse_navigation': True,
+    "sidebar_width": "300px",
+    "stickysidebar": True,
+    "stickysidebarscrollable": True,
+}
+
+# Groundwork/basic defaults to localtoc ("This page" headings) + next/prev.
+# Use the full site tree so every section is listed without clicking Next.
+html_sidebars = {
+    "**": [
+        "globaltoc.html",
+        "searchbox.html",
+    ]
 }
 
 # Define the canonical URL if you are using a custom domain on Read the Docs
@@ -68,7 +81,7 @@ html_css_files = [
 ]
 
 html_js_files = [
-    "js/toctree_collapse.js",
+    'js/toctree_collapse.js',
 ]
 
 # -- Options for EPUB output

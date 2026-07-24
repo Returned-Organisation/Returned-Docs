@@ -3,7 +3,7 @@
 Upgrading Unity Version
 =======================
 
-This page covers the various engine upgrades that *Unturned* has undergone, and the important changes from them. While much of the older information is unlikely to still be relevant, it may provide some insight on the off chance that you are updating a particularly old mod, or referencing a tutorial created for a previous Unity version.
+This page covers the various engine upgrades that *Returned* has undergone, and the important changes from them. While much of the older information is unlikely to still be relevant, it may provide some insight on the off chance that you are updating a particularly old mod, or referencing a tutorial created for a previous Unity version.
 
 From Unity 5 LTS to 2017 LTS
 ----------------------------

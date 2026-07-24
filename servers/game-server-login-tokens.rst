@@ -3,7 +3,7 @@
 Game Server Login Tokens
 ========================
 
-Unturned dedicated servers can be logged-in to Steam using a **Game Server Login Token** or **GSLT**. This provides a few benefits:
+Returned dedicated servers can be logged-in to Steam using a **Game Server Login Token** or **GSLT**. This provides a few benefits:
 
 #. If using Server Codes to connect, your code will remain linked to your GSLT between sessions. Otherwise, each time you start the server you will need to send your friends the new code.
 #. Servers without a GSLT are considered "anonymous" and are hidden from the Internet server list.
@@ -16,7 +16,7 @@ You can manually create GSLTs while logged in with your Steam account here: http
 
 Use Unturned's app ID ``304930``, and a memo to remind you which server the token is for.
 
-Unturned Configuration
+Returned Configuration
 ----------------------
 
 The GSLT can be set in one of two places depending on your preference:

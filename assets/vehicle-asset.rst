@@ -889,7 +889,35 @@ When ``true``, players can ride on any vehicle collider. When ``false``, only ``
 
 .. note::
 
-	This property is part of a Returned fork feature. See :ref:`doc_vehicle_platform_riding`.
+	Networked reference-frame / based movement: standing players stay in world space with the CharacterController enabled; position is replicated relative to the vehicle (or platform) transform.
+
+.. note::
+
+	These same ride surfaces also let **other vehicles** be carried on this vehicle's deck (for example a car driven into a cargo plane), staying physical and driveable rather than being locked like a tow. See :ref:`doc_returned_vehicle_carrying`.
+
+Prefab setup
+~~~~~~~~~~~~
+
+Under the vehicle root, add optional ride surfaces:
+
+.. code-block:: text
+
+	VehicleRoot/
+	  Platforms/
+	    Platform_0
+	    Platform_1
+
+Each ``Platform_#`` should have colliders on the ``Vehicle`` layer. When ``Allow_Whole_Vehicle_Platform`` is ``true``, the vehicle root is used instead of (or in addition to) named platforms. Barricades planted on the vehicle also resolve to the vehicle root as a ride surface.
+
+Server config
+~~~~~~~~~~~~~
+
+``Gameplay.Allow_Vehicle_Platform_Riding`` (default ``true``) globally enables or disables on-foot riding of vehicle platforms.
+
+Multiplayer notes
+~~~~~~~~~~~~~~~~~
+
+Walking packets and player state broadcasts carry ``baseNetId`` + a base-relative position. Observers interpolate riders through the normal snapshot buffer after resolving the base pose, so no separate platform attach/detach RPCs are required.
 
 ----
 

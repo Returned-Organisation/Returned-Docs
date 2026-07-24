@@ -3,7 +3,7 @@
 Command IO
 ==========
 
-By default Unturned executes commands from console input, and logs information to console output. This can be overridden however, for example to interact with an external process or remote console.
+By default Returned executes commands from console input, and logs information to console output. This can be overridden however, for example to interact with an external process or remote console.
 
 To replace the vanilla implementation:
 

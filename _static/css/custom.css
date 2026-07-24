@@ -1,23 +1,93 @@
-/* Custom tweaks to the Read the Docs Sphinx Theme.
+/* Custom tweaks for the Groundwork Sphinx theme.
 * Less generic styling should be placed in its own stylesheet.
 */
 
+/* Returned dark green accents (replace Groundwork gold). */
+:root {
+	--returned-green: #3d8f55;
+	--returned-green-hover: #5cb870;
+	--returned-green-dark: #1e5631;
+	--returned-green-tint: #2a4a33;
+}
+
+/* Hide scrollbars; scrolling still works with wheel / trackpad / keys. */
+html,
+body,
+div.sphinxsidebar,
+div.sphinxsidebarwrapper {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Legacy Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+div.sphinxsidebar::-webkit-scrollbar,
+div.sphinxsidebarwrapper::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	display: none; /* Chromium / Safari */
+}
+
+div.sphinxsidebar a,
+a,
+a.headerlink {
+	color: var(--returned-green);
+}
+
+div.sphinxsidebar a:hover,
+a:hover,
+a.headerlink:hover {
+	color: var(--returned-green-hover);
+}
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+	color: var(--returned-green-hover);
+}
+
+.note .admonition-title,
+.seealso .admonition-title {
+	background-color: var(--returned-green-dark);
+}
+
+.note,
+.seealso {
+	background-color: var(--returned-green-tint);
+}
+
+div.sphinxsidebar li.toctree-l1 {
+	margin: 0.15em 0;
+}
+
+/* Code blocks: kill Flasky whitespace underlines if they leak through, and
+   keep default / inline code light on dark panels. */
+.highlight .w {
+	color: inherit !important;
+	text-decoration: none !important;
+}
+
+div.highlight {
+	background-color: #2b2b2b !important;
+	color: #f8f8f2 !important;
+}
+
+div.highlight pre {
+	color: #f8f8f2 !important;
+}
+
+code.literal,
+tt.literal,
+.rst-content code.literal,
+span.pre {
+	color: #e6e6e6 !important;
+	background-color: #2b2b2b;
+}
+
 /* Tables should take up the entire available horizontal space within their container. */
-.wy-table-responsive table {
+table.docutils {
 	width: 100%;
-}
-
-/* COMMENTED OUT - Wrapping table contents.
-* This was the "intended fix" before simply maxing table width.
-* May be worth revisiting the idea for mobile devices, where horizontal scrolling can be cumbersome.
-*//*
-@media screen and (min-width: 769px) {
-	.wy-table-responsive { overflow: visible; }
-	.wy-table-responsive table td { white-space: normal; }
-}
-*/
-
-/* Fix unreadable text when selection version from sidebar. */
-select option {
-    background: #343131 !important;
 }

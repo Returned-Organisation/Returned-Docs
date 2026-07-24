@@ -111,7 +111,7 @@ Interactables
 
 .. note::
 
-	``Physics_Prop`` is a Returned fork feature. See :ref:`doc_physics_prop_example` for a worked example.
+	See :ref:`doc_physics_prop_example` for a worked ``Physics_Prop`` example.
 
 .. note::
 
@@ -177,7 +177,7 @@ Physics Props
 
 .. note::
 
-	These properties are part of a Returned fork feature. See :ref:`doc_physics_prop_example` for a worked example.
+	See :ref:`doc_physics_prop_example` for a worked example.
 
 These properties require ``Interactability Physics_Prop``. By default, all sources can move the prop unless restricted with the allow/deny properties below.
 

@@ -10,7 +10,7 @@ Which tags are supported depends on the :ref:`doc_glazier` mode being used. Most
 Extended Tags
 -------------
 
-These tags are specific to *Unturned*.
+These tags are specific to *Returned*.
 
 **\<br\>**: New line. Supported in most multi-line text boxes such as dialogue, signs/notes, item descriptions, etc.
 

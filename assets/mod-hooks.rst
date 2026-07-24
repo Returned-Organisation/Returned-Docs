@@ -6,7 +6,7 @@ Mod Hooks
 Overview
 --------
 
-Script Components can be added to Game Objects in Unity and exported in Asset Bundles *IF* they match a script in the base game code. These intentionally exportable scripts are referred to as **Mod Hooks**. They can be imported into a Unity project from the Project.unitypackage, and added to game objects inside the Unturned components menu. Each script makes several Events available which can drive other component properties like visibility or play an animation.
+Script Components can be added to Game Objects in Unity and exported in Asset Bundles *IF* they match a script in the base game code. These intentionally exportable scripts are referred to as **Mod Hooks**. They can be imported into a Unity project from the Project.unitypackage, and added to game objects inside the Returned components menu. Each script makes several Events available which can drive other component properties like visibility or play an animation.
 
 Each script documents its purpose and members within its \*.cs file.
 

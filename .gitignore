@@ -9,3 +9,7 @@ __pycache__/
 
 # Virtual environment files
 /.venv/
+
+# Local agent guidance (not published with the docs)
+/AGENTS.md
+/.cursor/

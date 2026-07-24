@@ -3,12 +3,12 @@
 Getting Started
 ===============
 
-To get started with creating mods for *Unturned*, or hosting your own multiplayer server, certain tools need to be downloaded first. This page provides an explanation for the different types of tools you may need – depending on what you are trying to do.
+To get started with creating mods for *Returned*, or hosting your own multiplayer server, certain tools need to be downloaded first. This page provides an explanation for the different types of tools you may need – depending on what you are trying to do.
 
-Installing Unturned
+Installing Returned
 -------------------
 
-*Unturned* must be downloaded in order to create, publish, and update mods. The game can be downloaded for free from `Steam <https://store.steampowered.com/app/304930/>`_.
+*Returned* must be downloaded in order to create, publish, and update mods. The game can be downloaded for free from `Steam <https://store.steampowered.com/app/304930/>`_.
 
 Not only do the game files include some of the tools necessary for creating your own custom content, but the game's official assets can also be used as an example when creating your own items, objects, or other game assets.
 
@@ -19,7 +19,7 @@ Adding *Unturned* to your Steam Library will also add the *Unturned Dedicated Se
 Installing Unity
 ----------------
 
-Installing the Unity Editor is required for exporting custom content for the game. We recommend using the same version as *Unturned*, which currently uses version **2022.3.62f3**. Unity can be `downloaded from their website <https://unity.com/releases/editor/archive>`_.
+Installing the Unity Editor is required for exporting custom content for the game. We recommend using the same version as *Returned*, which currently uses version **2022.3.62f3**. Unity can be `downloaded from their website <https://unity.com/releases/editor/archive>`_.
 
 Although most 2022.3 LTS versions should be compatible, and some older LTS versions *can* be used with some additional setup, those versions might not function as intended.
 
@@ -28,12 +28,12 @@ When installing a Unity version, you will have the option to install some option
 - **Linux Build Support (Mono)** – Adds support for your mod on Linux devices.
 - **Mac Build Support (Mono)** – Adds support for your mod on macOS devices.
 
-Once Unity is installed, a project can be created to house custom content. At this point, it is recommended to import Unturned's provided Unity packages.
+Once Unity is installed, a project can be created to house custom content. At this point, it is recommended to import Returned's provided Unity packages.
 
 Unity Packages
 --------------
 
-Unturned provides multiple Unity packages with the base installation of the game. These packages include examples that can be referenced when creating custom content, and provide the tools necessary to export content from Unity.
+Returned provides multiple Unity packages with the base installation of the game. These packages include examples that can be referenced when creating custom content, and provide the tools necessary to export content from Unity.
 
 These Unity packages are located in the ``.../Unturned/Extras/Sources`` directory, and are regularly updated alongside any major updates to the game.
 
@@ -86,4 +86,4 @@ To create custom textures for your modded content – such as for new shirts or 
 Blender
 ```````
 
-A 3D modeling tool such as Blender is required to create custom models (and animations). Blender is the same tool we use for *Unturned*, although it is not strictly required.
+A 3D modeling tool such as Blender is required to create custom models (and animations). Blender is the same tool we use for *Returned*, although it is not strictly required.

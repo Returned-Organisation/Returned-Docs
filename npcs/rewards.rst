@@ -314,9 +314,9 @@ Respawns zombie(s) at named Spawnpoint nodes. If insufficient dead zombies are a
 
 **Reward_#_SpawnQuantity** *int*: Amount of zombies to spawn.
 
-**Reward_#_CooldownId** *string*: If set, only spawn if a named global cooldown (shared between all players) has passed.
+**Reward_#_CooldownId** *string*: If set with a positive ``CooldownDuration``, only spawn if a named global cooldown (shared between all players) has passed.
 
-**Reward_#_CooldownDuration** *float*: Seconds since CooldownId last ran before this reward can spawn zombies again.
+**Reward_#_CooldownDuration** *float*: Seconds since CooldownId last ran before this reward can spawn zombies again. Non-positive values (including the default of -1) disable the cooldown.
 
 .. _doc_npc_asset_rewards:localization:
 

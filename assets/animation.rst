@@ -3,7 +3,7 @@
 Animation
 =========
 
-Unturned's character rig is terrible – so using existing animations is recommended for your sanity.
+Returned's character rig is terrible – so using existing animations is recommended for your sanity.
 
 Export
 ------

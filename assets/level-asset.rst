@@ -72,7 +72,7 @@ When clouds are disabled (``Has_Clouds false``), these properties can be used to
 
 **CloudOverride_ParticleSystems** *list*: Dictionaries describing particle systems in ``CloudOverride_Prefab`` with the following additional properties:
 
-**Path** *string*: Path to a Particle System component relative to ``CloudOverride_Prefab``. This renderer should likely use the Unturned "Particles/Standard Surface (ZClip False)" shader to prevent a harsh transition with low max draw distance.
+**Path** *string*: Path to a Particle System component relative to ``CloudOverride_Prefab``. This renderer should likely use the Returned "Particles/Standard Surface (ZClip False)" shader to prevent a harsh transition with low max draw distance.
 
 **RateOverTimeScale** *float*: Particle System's emission rate is multiplied by current time of day's cloud slider value (between zero and one) scaled by this value.
 

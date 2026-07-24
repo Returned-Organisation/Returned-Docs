@@ -1,28 +1,70 @@
-/* CSS for toctree_collapse.js script.
-* TOC sections are "collapsed" by default, and only displayed when they've been "toggled".
-*/
+/* Collapsible global TOC: section captions and nested page trees. */
 
-.wy-menu-vertical .caption {
+div.sphinxsidebar p.caption.toc-toggle {
 	cursor: pointer;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	gap: 0.35em;
+	margin: 0.85em 0 0.25em 0;
+	padding: 0.15em 0;
+	color: #eee;
+	font-weight: bold;
 }
 
-.wy-menu-vertical .caption .caption-text:before {
-	content: "❯"; /* ⮞ ⮚ ❯ */
+div.sphinxsidebar p.caption.toc-toggle::before {
+	content: "▸";
 	display: inline-block;
-	transition: transform 0.25s;
-	transform-origin: 25% 50%;
-	width: 16px;
-	height: 32px;
+	width: 0.9em;
+	color: var(--returned-green-hover);
+	flex-shrink: 0;
 }
 
-.wy-menu-vertical .caption.toggled .caption-text:before {
-	transform: rotate(90deg);
+div.sphinxsidebar p.caption.toc-toggle.expanded::before {
+	content: "▾";
 }
 
-.wy-menu-vertical .caption + ul {
+div.sphinxsidebar li.toc-branch {
+	position: relative;
+	list-style: none;
+	margin-left: 0;
+}
+
+div.sphinxsidebar li.toc-branch > a {
+	display: inline;
+	padding-left: 0.15em;
+}
+
+div.sphinxsidebar button.toc-expand {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.1em;
+	height: 1.1em;
+	margin: 0 0.15em 0 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: var(--returned-green-hover);
+	cursor: pointer;
+	font-size: 0.85em;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+div.sphinxsidebar button.toc-expand::before {
+	content: "▸";
+}
+
+div.sphinxsidebar li.toc-branch.expanded > button.toc-expand::before {
+	content: "▾";
+}
+
+div.sphinxsidebar ul.toc-collapse {
 	display: none;
+	margin-top: 0.15em;
 }
 
-.wy-menu-vertical .caption.toggled + ul {
+div.sphinxsidebar ul.toc-collapse.expanded {
 	display: block;
 }

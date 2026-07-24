@@ -3,11 +3,11 @@ Returned Documentation
 
 These are the source files for *Returned*'s modding documentation.
 
-*Returned* is a non-commercial mod fork of the [U3 SDK](https://github.com/SmartlyDressedGames/U3-SDK) for [Unturned](https://smartlydressedgames.com/unturned/). Not affiliated with or endorsed by Smartly Dressed Games.
+*Returned* is a non-commercial mod of [Unturned](https://smartlydressedgames.com/unturned/). Not affiliated with or endorsed by Smartly Dressed Games.
 
 The built documentation is hosted by [Read the Docs](https://readthedocs.org/) here: https://returned-docs.readthedocs.io/
 
-This repository is based on [SmartlyDressedGames/Unturned-Docs](https://github.com/SmartlyDressedGames/Unturned-Docs). It includes the official Unturned modding documentation, plus additional pages for Returned-specific features.
+This repository is based on [SmartlyDressedGames/Unturned-Docs](https://github.com/SmartlyDressedGames/Unturned-Docs). It covers workshop modding (items, vehicles, maps, NPCs) and Returned server plugin / module APIs.
 
 Offline Downloads
 -----------------
@@ -19,7 +19,7 @@ Contributing
 
 Anyone can contribute towards *Returned*'s modding documentation. This repository has two branches – **latest** and **stable** – although contributions should only be made towards the "latest" branch.
 
-- **latest**: Always has the latest documentation, including upcoming Returned features that might not be available in the current version of the fork.
+- **latest**: Always has the latest documentation, including upcoming features that might not be available in the current version.
 
 - **stable**: Occasionally updated with the additions to the "latest" branch.
 
@@ -140,7 +140,7 @@ If needed, you can force Esbonio to rebuild these pages. Delete the files at `%A
 Syncing Upstream Documentation
 ------------------------------
 
-Returned Docs is forked from [SmartlyDressedGames/Unturned-Docs](https://github.com/SmartlyDressedGames/Unturned-Docs). To pull upstream documentation updates:
+Returned Docs is based on [SmartlyDressedGames/Unturned-Docs](https://github.com/SmartlyDressedGames/Unturned-Docs). To pull upstream documentation updates:
 
 ```shell
 git fetch upstream

@@ -3,20 +3,20 @@
 Glazier
 =======
 
-Unity (the game engine Unturned runs on) has three different incompatible UI systems:
+Unity (the game engine Returned runs on) has three different incompatible UI systems:
 
 1. IMGUI
 2. uGUI
 3. UIToolkit
 
-Unturned has a feature nicknamed **Glazier** which abstracts the underlying UI system, allowing IMGUI, uGUI, or UIToolkit to be used.
+Returned has a feature nicknamed **Glazier** which abstracts the underlying UI system, allowing IMGUI, uGUI, or UIToolkit to be used.
 
 uGUI is Unity's current recommended UI system, but unfortunately some players run into visual artifacts and flickering UI with it. In those cases enabling IMGUI is recommended.
 
 Context
 -------
 
-At its 2014 release into Early Access, Unturned used IMGUI, as it was Unity's only built-in UI system. For performance reasons, automatic layout was turned off in favor of manually specifying the position and size of UI elements.
+At its 2014 release into Early Access, Returned used IMGUI, as it was Unity's only built-in UI system. For performance reasons, automatic layout was turned off in favor of manually specifying the position and size of UI elements.
 
 uGUI support was introduced in late 2020 for players running into issues with IMGUI. Unfortunately, IMGUI support needed to be kept for players facing different problems. Knowing that Unity was working on UIToolkit as a potential replacement, automatic layout was held off until an abstraction ideally supporting all three could be implemented.
 
@@ -45,10 +45,14 @@ You can opt to use Unity's legacy UI system, IMGUI, by enabling a command-line a
 - Plugin UIs are sorted underneath the game UI i.e. plugin UI cannot overlay.
 - Rich text does not fade out in chat.
 
+.. note::
+
+	Returned **Server Sent UI** follows the player's Glazier choice. Legacy plugin UIs spawned with ``EffectManager.SendUIEffect`` still use uGUI prefabs and do not. See :ref:`doc_returned_server_sent_ui`.
+
 uGUI
 ----
 
-This is Unturned's current default UI system, so opting in is not necessary.
+This is Returned's current default UI system, so opting in is not necessary.
 
 **Pros:**
 
@@ -65,7 +69,7 @@ This is Unturned's current default UI system, so opting in is not necessary.
 UIToolkit
 ----------
 
-Integration into Unturned is experimental. It's not ready to be the default yet. You can check it out with a command-line argument:
+Integration into Returned is experimental. It's not ready to be the default yet. You can check it out with a command-line argument:
 
 1. Right-click Unturned in your Steam library
 2. Click "Properties..."
@@ -74,5 +78,5 @@ Integration into Unturned is experimental. It's not ready to be the default yet.
 
 **Cons:**
 
-- Scroll views have incorrect content size (for now). With IMGUI and uGUI it was possible to explicitly specify the content size, whereas UIToolkit tries to automatically calculate it from the content bounds. Unfortunately, many of Unturned's scroll views have content clipping outside the intended content area, and so they don't appear correctly. For example, the location labels on the map can intersect the content border.
+- Scroll views have incorrect content size (for now). With IMGUI and uGUI it was possible to explicitly specify the content size, whereas UIToolkit tries to automatically calculate it from the content bounds. Unfortunately, many of Returned's scroll views have content clipping outside the intended content area, and so they don't appear correctly. For example, the location labels on the map can intersect the content border.
 - Text shadows and outlines are not as nice as with uGUI.

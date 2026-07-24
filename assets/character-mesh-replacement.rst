@@ -7,6 +7,11 @@ The player's character mesh can be entirely replaced with a special :ref:`shirt 
 
 Two limitations are that it must be a shirt because only shirts are loaded for first person (1P) views, and the 1P model should only contain the arms because the rest of the body is not animated.
 
+.. note::
+
+	The same mesh-override flags also work on ``Pants``, ``Shoes`` and ``Bodysuit``
+	clothing, not just shirts. See :ref:`doc_item_clothing_slots`.
+
 Properties Reference
 --------------------
 

@@ -1,13 +1,7 @@
 # Base packages
 pygments==2.20.0
 sphinx==8.1.3
-sphinx_rtd_theme==3.0.2
-
-# Sphinx/RTD dependencies
-#########################
-
-# Sphinx-RTD-Theme dependency. Previously needed to be manually specified. Likely safe to remove (and let it be auto-generated in requirements.txt).
-#sphinxcontrib-jquery
+groundwork-sphinx-theme==1.1.1
 
 # Sphinx extensions
 ###################

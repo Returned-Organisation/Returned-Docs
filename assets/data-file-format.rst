@@ -3,7 +3,7 @@
 Data File Format
 ================
 
-This article describes the syntax of Unturned's ``.dat`` and ``.asset`` files.
+This article describes the syntax of Returned's ``.dat`` and ``.asset`` files.
 
 Each line is a key-value pair separated by a space. The key and/or value can optionally be in quotes. For example:
 
@@ -170,6 +170,6 @@ Instead, the opening ``[`` or ``{`` must be placed on the next line:
 History
 -------
 
-Prior to the 3.23.6.0 update there were two sets of custom Unturned syntax: "v1" for ``.dat`` files, and "v2" for ``.asset`` files. Assets using v1 syntax only supported key-value pairs, whereas v2 introduced dictionaries, lists, and required keys/values to be quoted.
+Prior to the 3.23.6.0 update there were two sets of custom Returned syntax: "v1" for ``.dat`` files, and "v2" for ``.asset`` files. Assets using v1 syntax only supported key-value pairs, whereas v2 introduced dictionaries, lists, and required keys/values to be quoted.
 
 This is why ``{`` and ``[`` must be on a new line, as existing v1 assets may have ``{`` or ``[`` as the first character of a value.

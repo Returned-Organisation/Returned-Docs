@@ -162,3 +162,27 @@ Enumerators
    * - ``Vehicle_Paint_Tool``
      - 48
      - Corresponds to the "Vehicle_Paint_Tool" item type.
+   * - ``Vehicle_Lockpick_Tool``
+     - 49
+     - Corresponds to the "Vehicle_Lockpick_Tool" item type.
+   * - ``Neckwear``
+     - 50
+     - Scarfs and collars rendered as a neck-parented 3D prefab. See :ref:`doc_item_clothing_slots`.
+   * - ``Undershirt``
+     - 51
+     - Base torso texture layer worn under a shirt. See :ref:`doc_item_clothing_slots`.
+   * - ``Jacket``
+     - 52
+     - Outer torso texture layer worn over a shirt. See :ref:`doc_item_clothing_slots`.
+   * - ``Gloves``
+     - 53
+     - Hand covering composited onto the character material. See :ref:`doc_item_clothing_slots`.
+   * - ``Belt``
+     - 54
+     - Waist accessory rendered as a 3D prefab that can also provide storage. See :ref:`doc_item_clothing_slots`.
+   * - ``Shoes``
+     - 55
+     - Footwear composited onto the character material, worn over pants. See :ref:`doc_item_clothing_slots`.
+   * - ``Bodysuit``
+     - 56
+     - Full-body suit that blocks the shirt, pants, gloves and shoes slots. See :ref:`doc_item_clothing_slots`.

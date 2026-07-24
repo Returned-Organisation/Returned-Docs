@@ -7,7 +7,7 @@ Editor Asset Redirectors
 
 Redirects apply while loading a map in the level editor. Any changes are then kept when saving the map.
 
-Create a file named "**EditorAssetRedirectors.txt**" in the Unturned folder.
+Create a file named "**EditorAssetRedirectors.txt**" in the Returned folder.
 
 - Empty lines are ignored.
 - Lines starting with ``//`` or ``#`` are ignored.

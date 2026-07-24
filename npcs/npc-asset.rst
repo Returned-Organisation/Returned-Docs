@@ -103,6 +103,78 @@ Pose
 
 **Pose_Pitch** *float*: How far the NPC leans forward or backward, in degrees. Numbers greater than 90 lean forward, while numbers less than 90 lean backward. Defaults to 90.
 
+Roaming
+-------
+
+Returned supports pathfinding roaming NPCs. See :ref:`doc_npcs_roaming` for navmesh setup, spawn points, and dialogue pause behaviour.
+
+**Can_Roam** *bool*: When true, level NPC spawn points for this asset create a roaming NPC. Defaults to false.
+
+**Speed_Walk** *float*: Walk speed while roaming. Defaults to ``3.5``.
+
+**Roam_Idle_Min** *float*: Minimum idle seconds between roam destinations. Defaults to ``2``.
+
+**Roam_Idle_Max** *float*: Maximum idle seconds between roam destinations. Defaults to ``8``.
+
+**Interactable_While_Roaming** *bool*: Allow talk while walking. Defaults to true.
+
+Combat (Returned)
+`````````````````
+
+See :ref:`doc_npcs_roaming` for behaviour details.
+
+**Can_Combat** *bool*: Enable combat AI. Defaults to false.
+
+**Aggression** *enum* (:ref:`doc_data_eanimalbehaviour`): Defaults to ``Ignore``.
+
+**Detection_Radius** *float*: ``0`` = stealth radius. Defaults to ``0``.
+
+**Combat_Leash_Radius** *float*: Defaults to ``48``.
+
+**Target_Lost_Radius** *float*: Defaults to ``64``.
+
+**Speed_Run** *float*: Defaults to ``7``.
+
+**Health** *uint16*: Defaults to ``100``.
+
+**Can_Die** *bool*: Defaults to true.
+
+**Invulnerable** *bool*: Defaults to false.
+
+**Respawn_Time** *float*: Defaults to ``300``. ``0`` = no respawn.
+
+**Combat_Reset_Delay** *float*: Defaults to ``30``.
+
+**Melee_Damage** *byte*: Defaults to ``15``.
+
+**Melee_Range** *float*: Defaults to ``2.25``.
+
+**Melee_Vertical_Range** *float*: Defaults to ``2``.
+
+**Melee_Interval** *float*: Defaults to ``1``.
+
+**Alert_On_Gunshot** *bool*: Defaults to true.
+
+**Hostile_Reputation_Below** *int*: Opt-in low-reputation auto-aggro threshold.
+
+**Ranged_Preferred_Min** *float*: Defaults to ``8``.
+
+**Ranged_Preferred_Max** *float*: Defaults to ``24``.
+
+**Weapon_Swap_Cooldown** *float*: Defaults to ``0.75``.
+
+**Primary_Ammo** / **Secondary_Ammo** / **Tertiary_Ammo** *uint16*: Starting gun ammo per slot.
+
+**Infinite_Ammo** *bool*: Defaults to false.
+
+**Loot_ID** *uint16*: Death loot spawn table.
+
+**Loot_Min** / **Loot_Max** *int*: Drop count range.
+
+**Loot_Chance** *float*: Defaults to ``1``.
+
+**Drop_Equipped_Weapons** *bool*: Drop P/S/T items on death.
+
 Conditions
 ----------
 

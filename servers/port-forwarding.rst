@@ -5,14 +5,14 @@ Port Forwarding
 
 .. note:: After the 3.23.14.0 update, port forwarding is no longer necessary to make a server accessible over the Internet. It's only required if you want players to be able to join directly by IP and/or domain name. For more information on the new alternatives to port forwarding, please refer to :ref:`Server Codes <doc_servers_server_codes>` and :ref:`Fake IP <doc_servers_fake_ip>`.
 
-When hosting a server on a home network **port forwarding** is required in order to direct traffic to the host computer. One way to think of it is that when there are multiple devices (e.g. computers and phones) connected to the LAN, the outside Internet does not know which device is the Unturned server. In this case port forwarding specifies which LAN device is the host.
+When hosting a server on a home network **port forwarding** is required in order to direct traffic to the host computer. One way to think of it is that when there are multiple devices (e.g. computers and phones) connected to the LAN, the outside Internet does not know which device is the Returned server. In this case port forwarding specifies which LAN device is the host.
 
 Two pieces of information: the port range and local device address are required prior to port forwarding, and are described in detail below.
 
 Port Range
 ----------
 
-Each Unturned server uses two consecutive ports while running. The first is for server list queries, and the second for in-game traffic.
+Each Returned server uses two consecutive ports while running. The first is for server list queries, and the second for in-game traffic.
 
 By default 27015 and 27016 are used. Setting a different value with the ``Port`` command uses that value and plus one. Recommended ``Port`` command settings are 27015 for the first server, 27017 for the second server, 27019 for the third server, so on and so forth.
 
@@ -43,7 +43,7 @@ In general the steps are along the lines of:
 
 4. Find the option to add a new rule.
 
-5. Name the new rule something related to Unturned for reference.
+5. Name the new rule something related to Returned for reference.
 
 6. Input 27015 as the starting port(s) and 27016 as the ending port(s).
 

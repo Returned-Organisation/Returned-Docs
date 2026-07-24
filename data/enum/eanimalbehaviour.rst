@@ -3,7 +3,7 @@
 EAnimalBehaviour
 ================
 
-The ``EAnimalBehaviour`` enumerated type controls how an :ref:`animal asset <doc_assets_animal>` reacts to nearby players and to damage.
+The ``EAnimalBehaviour`` enumerated type controls how an :ref:`animal asset <doc_assets_animal>` reacts to nearby players and to damage. Roaming combat NPCs reuse the same enum via the ``Aggression`` property (see :ref:`doc_npcs_roaming`).
 
 Enumerators
 ```````````
@@ -34,9 +34,7 @@ Enumerators
 Counter Behaviour
 `````````````````
 
-.. note::
-
-	``Counter`` is a Returned fork feature. It is intended for animals that should appear passive until provoked.
+``Counter`` is intended for animals that should appear passive until provoked.
 
 Unlike ``Offense`` animals, ``Counter`` animals are not alerted by nearby players or gunshots. They only become hostile after taking damage. When damaged by a player, the animal targets that player through ``Animal.alertDamagedByPlayer``. ``DamageTool.damageAnimal`` routes player-instigated damage through this path when ``AlertPosition`` is set.
 

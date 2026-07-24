@@ -49,7 +49,7 @@ All content on the map must be an official asset from the base game, or be a cus
 Art Style
 `````````
 
-Curated experiences should still look and feel like *Unturned*. Any custom content on the map should generally match the base game's art style (similar to preexisting curated maps).
+Curated experiences should still look and feel like *Returned*. Any custom content on the map should generally match the base game's art style (similar to preexisting curated maps).
 
 Human-like drawings such as faces and skulls should be blocky, similar to the in-game characters. This is a common source of revision requests from us.
 

@@ -784,7 +784,7 @@ Bullet_Gravity_Multiplier :ref:`float32 <doc_data_builtin_types>` ``4``
 
 Multiplier for gravity's acceleration. This property is available to *ballistic projectile* weapons. Setting this value to ``1`` allows for more realistic bullet drop.
 
-.. note:: This defaults to ``4`` because *Unturned*'s maximum engagement distance is rather short, but this distance may be raised in the future if/when network improvements are made to the game. Gravity defaults to 9.81 m/s², or can be configured in the :ref:`doc_mapping_config`.
+.. note:: This defaults to ``4`` because *Returned*'s maximum engagement distance is rather short, but this distance may be raised in the future if/when network improvements are made to the game. Gravity defaults to 9.81 m/s², or can be configured in the :ref:`doc_mapping_config`.
 
 ----
 

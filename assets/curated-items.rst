@@ -29,7 +29,7 @@ Guidelines
 .. |ico2| image:: /img/f0f0f0.png
 	:width: 15px
 
-Most of these guidelines are intended to help promote consistency with *Unturned*'s art style. Here are the guidelines you should keep in mind:
+Most of these guidelines are intended to help promote consistency with *Returned*'s art style. Here are the guidelines you should keep in mind:
 
 #. | Avoid high contrast colors. They're often painful to look at, especially when the item appears in harsh lighting.
 
@@ -41,7 +41,7 @@ Most of these guidelines are intended to help promote consistency with *Unturned
 
 #. | Textures should be kept to a reasonable resolution. Ideally, 2048x2048 scaled down to 1024x1024 for large items (e.g., the Maplestrike), and 1024x1024 scaled down to 512x512 for small items (e.g., the Cobra).
 
-#. | Avoid using high metallic or smoothness values. Unturned does not use reflection probes, and the only sources of metallic reflection data are limited to optional features like skybox reflections and screen-space reflections.
+#. | Avoid using high metallic or smoothness values. Returned does not use reflection probes, and the only sources of metallic reflection data are limited to optional features like skybox reflections and screen-space reflections.
 
 #. | Corners of models should not be beveled. Most models have sharp edges (e.g., 90°). There is not a hard limit on vertex, triangle, or polygon count because anything matching the game's art style will naturally have a reasonable number.
 
@@ -53,7 +53,7 @@ Most of these guidelines are intended to help promote consistency with *Unturned
 
 #. | We do not support custom shaders, i.e., shaders not included in the vanilla game cannot be used.
 
-#. | Unfortunately, physics do not play well with the Unturned character, and cannot be used on cosmetics at this time.
+#. | Unfortunately, physics do not play well with the Returned character, and cannot be used on cosmetics at this time.
 
 Remember: these are just guidelines. Except in specific cases (such as copyright infringement), we may occasionally accept items that break some of these guidelines. However, these are the things we are looking for in submissions. Sticking to these guidelines will help your chances of getting your item accepted.
 
@@ -108,7 +108,7 @@ The orientation is rather unfortunate: +Z is the mythical's up direction and +Y 
 Creating Skins
 --------------
 
-Any item in *Unturned* could support skins, but not every item does at this time. We recommend only creating skins for items that are already skinnable. This includes most weapons, along with a few miscellaneous items such as Canned Beans and the Detonator. The unwrapped meshes are included as part of the ExampleAssets.unitypackage.
+Any item in *Returned* could support skins, but not every item does at this time. We recommend only creating skins for items that are already skinnable. This includes most weapons, along with a few miscellaneous items such as Canned Beans and the Detonator. The unwrapped meshes are included as part of the ExampleAssets.unitypackage.
 
 At the very least, you will want to create a custom albedo for your skin. You can also add custom metallic or emission textures. When eventually uploading your skin to the Steam Workshop, please make sure you follow the "Exporting Unity Package" steps to include your source files! This allows us to add any extra needed assets, or fix minor issues.
 

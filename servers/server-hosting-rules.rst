@@ -22,7 +22,7 @@ Recent changes
 Monetization Types
 ------------------
 
-Servers are not allowed to sell or otherwise offer access to **vanilla premium content**. This includes the Gold Upgrade benefits in addition to any vanilla cosmetics and/or skins. For example, any item purchasable from the Stockpile or the Steam Community Market for Unturned is considered a "vanilla premium content".
+Servers are not allowed to sell or otherwise offer access to **vanilla premium content**. This includes the Gold Upgrade benefits in addition to any vanilla cosmetics and/or skins. For example, any item purchasable from the Stockpile or the Steam Community Market for Returned is considered a "vanilla premium content".
 
 When offering cosmetic perks to players as a microtransaction, the server should own (or have licensed) the rights to that content. For example, you could create your own custom "cosmetics" and offer those to players instead.
 

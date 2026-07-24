@@ -5,7 +5,7 @@ Steam Workshop
 
 The **Steam Workshop** allows for sharing user-generated content (such as new maps, items, localizations, and other in-game content). This type of content is typically known as a *mod*, or *modification*. Players can download mods by clicking the Subscribe button on the detail page for the item.
 
-Players can start exploring the Steam Workshop from its `Home page <https://steamcommunity.com/app/304930/workshop/>`_, or learn more about the features utilized by *Unturned* from the `About page <https://steamcommunity.com/workshop/about/?appid=304930>`_.
+Players can start exploring the Steam Workshop from its `Home page <https://steamcommunity.com/app/304930/workshop/>`_, or learn more about the features utilized by *Returned* from the `About page <https://steamcommunity.com/workshop/about/?appid=304930>`_.
 
 Browsing
 --------

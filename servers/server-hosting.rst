@@ -86,7 +86,7 @@ Learn more about available commands on the `Unturned Wiki <https://unturned.wiki
 	// Read more about commands on the game's wiki: https://unturned.wiki.gg/Commands
 
 	// Name of your server in the server list.
-	Name My Unturned Server
+	Name My Returned Server
 
 	// Specify which map to load, by name.
 	// Official maps include PEI, Washington, Yukon, Russia, and Germany.
@@ -113,9 +113,14 @@ Learn more about available commands on the `Unturned Wiki <https://unturned.wiki
 	// Perspective Third
 	Perspective Both
 	// Perspective Vehicle
+	// Perspective Weapon
 
 	// Which port should be used when port forwarding.
 	// Port 27015
+
+.. note::
+
+	``Perspective Weapon``: players can toggle first- and third-person while unarmed, but equipping a gun or melee locks them to first-person until they dequip.
 
 Runtime
 ~~~~~~~

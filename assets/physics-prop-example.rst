@@ -14,7 +14,7 @@ Example Files
 - ``Builds/Test/Bundles/Objects/Medium/Soccer_Ball_0/Soccer_Ball_0.unity3d`` — legacy asset bundle (built from Unity, not the master bundle)
 - ``Builds/Test/Sandbox/Soccertest/Soccerball/`` — Sandbox runtime copy and bundle
 
-The ``.dat`` includes ``Exclude_From_Master_Bundle`` and ``Asset_Bundle_Version 6`` so Unturned loads the sibling ``Soccer_Ball_0.unity3d`` file instead of ``core.masterbundle``.
+The ``.dat`` includes ``Exclude_From_Master_Bundle`` and ``Asset_Bundle_Version 6`` so Returned loads the sibling ``Soccer_Ball_0.unity3d`` file instead of ``core.masterbundle``.
 
 Who Can Move a Physics Prop
 ---------------------------
@@ -124,7 +124,7 @@ This is expected after **Build Test** or Steam sync. Copy them again from ``Asse
 Ball Falls Through Ground
 `````````````````````````
 
-Unturned's physics matrix only lets the **ITEM** layer collide with terrain. Physics props switch to ITEM at runtime. Rebuild scripts and the legacy bundle (collider center fix).
+Returned's physics matrix only lets the **ITEM** layer collide with terrain. Physics props switch to ITEM at runtime. Rebuild scripts and the legacy bundle (collider center fix).
 
 Ball Does Not React to Punches, Bullets, or Explosions
 ``````````````````````````````````````````````````````
